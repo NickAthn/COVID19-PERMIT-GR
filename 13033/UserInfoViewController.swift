@@ -10,7 +10,7 @@ import UIKit
 import EasyPeasy
 import Disk
 
-class ViewController: UIViewController {
+class UserInfoViewController: UIViewController {
     var shouldUpdateConstraints = true
     
     var descriptionLabel: UILabel!
