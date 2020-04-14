@@ -102,11 +102,16 @@ class UserInfoViewController: UIViewController {
                 let user = User(fullName: fullNameTextField.text!, address: homeAddressTextField.text!)
                 do {
                     try Disk.save(user, to: .applicationSupport, as: "user.json")
+                    navigateToMovement()
                 } catch {
                     print("Error saving user info")
                 }
             }
         }
     }
-
+    
+    func navigateToMovement() {
+        let mVC = MovementViewController()
+        self.navigationController?.setViewControllers([mVC], animated: true)
+    }
 }
