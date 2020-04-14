@@ -8,6 +8,7 @@
 
 import UIKit
 import EasyPeasy
+import Disk
 
 class ViewController: UIViewController {
     var shouldUpdateConstraints = true
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupView()
         updateViewConstraints()
+        setupActions()
     }
     
     func setupView() {
@@ -54,6 +56,10 @@ class ViewController: UIViewController {
         saveButton.tintColor = .white
         saveButton.roundCorners(.allCorners, radius: 11)
         view.addSubview(saveButton)
+    }
+    
+    func setupActions() {
+        saveButton.addTarget(self, action: #selector(didTapSaveButton(sender:)), for: .touchUpInside)
     }
     
     override func updateViewConstraints() {
@@ -89,6 +95,18 @@ class ViewController: UIViewController {
         }
         super.updateViewConstraints()
     }
-
+    
+    @objc func didTapSaveButton(sender: Any?) {
+        if fullNameTextField.text != "" && fullNameTextField.text != nil {
+            if homeAddressTextField.text != "" && homeAddressTextField.text != nil {
+                let user = User(fullName: fullNameTextField.text!, address: homeAddressTextField.text!)
+                do {
+                    try Disk.save(user, to: .applicationSupport, as: "user.json")
+                } catch {
+                    print("Error saving user info")
+                }
+            }
+        }
+    }
 
 }
