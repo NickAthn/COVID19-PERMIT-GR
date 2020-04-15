@@ -33,12 +33,14 @@ class MovementViewController: UIViewController {
         view.backgroundColor = ColorScheme().background
         
         navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.navigationBar.tintColor = ColorScheme().backgroundConstast
+       
         
         for movement in Movement.current {
             let mvButton = UIButton(frame: .zero)
             mvButton.setTitle(movement.title, for: .normal)
+            mvButton.titleLabel?.font = Font(.installed(.HelveticaNeueMedium), size: .standard(.h4)).instance
             mvButton.tag = movement.id
+            mvButton.titleLabel?.numberOfLines = 0
             mvButton.backgroundColor = ColorScheme().surface
             mvButton.setTitleColor(ColorScheme().surfaceContrast, for: .normal)
             mvButton.roundCorners(.allCorners, radius: 11)
@@ -48,6 +50,7 @@ class MovementViewController: UIViewController {
         
         changeUserInfoButton = UIButton(frame: .zero)
         changeUserInfoButton.setTitle("Αλλαγή Στοιχείων", for: .normal)
+        changeUserInfoButton.titleLabel?.font = Font(.installed(.HelveticaNeueBold), size: .standard(.h3)).instance
         changeUserInfoButton.backgroundColor = ColorScheme().theme
         changeUserInfoButton.setTitleColor(ColorScheme().themeContrast, for: .normal)
         changeUserInfoButton.roundCorners(.allCorners, radius: 11)
@@ -114,6 +117,8 @@ class MovementViewController: UIViewController {
     
     @objc func didTapChangeUserInfoButton(sender: Any?) {
         let vc = UserInfoViewController(user: activeUser)
-        self.present(vc, animated: true)
+//        let nav = UINavigationController(rootViewController: vc)
+//        self.present(nav, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

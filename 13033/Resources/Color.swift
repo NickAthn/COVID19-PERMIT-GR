@@ -10,7 +10,7 @@ import UIKit
 
 struct ColorScheme {
     /// Dynamic Colors
-    var theme = UIColor(named: "theme")
+    var theme =  UIColor(named: "theme")
     var themeContrast = UIColor(named: "themeContrast")
     
     var background = UIColor(named: "background")

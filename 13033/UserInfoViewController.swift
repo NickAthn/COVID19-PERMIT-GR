@@ -17,6 +17,7 @@ class UserInfoViewController: UIViewController {
     var fullNameTextField: UITextField!
     var homeAddressTextField: UITextField!
     var saveButton: UIButton!
+    var settingsNavItem : UINavigationItem!
     
     var activeUser: User!
     convenience init(user: User) {
@@ -38,8 +39,12 @@ class UserInfoViewController: UIViewController {
         self.title = "Στοιχεία SMS"
         self.view.backgroundColor = ColorScheme().background
         
+        
+        
+        
         descriptionLabel = UILabel(frame: .zero)
-        descriptionLabel.text = "Συμπληρωσε τα στοιχεια που θα χρησημοποιουντε για την αποστολη SMS στο 13033. Τα στοιχεια σου θα αποθηκευτουν τοπικα στο κινητο προσβασιμα μονο απο εσενα."
+        descriptionLabel.text = "Τα παρακάτω στοιχεία θα χρησιμοποιούνται για την αποστολή SMS στο 13033. Τα στοιχειά σου θα αποθηκευτούν τοπικά στο κινητό και θα είναι προσβάσιμα μόνο από εσένα"
+        descriptionLabel.font = Font(.installed(.HelveticaNeue), size: .standard(.h5)).instance
         descriptionLabel.textAlignment = .natural
         descriptionLabel.adjustsFontSizeToFitWidth = true
         descriptionLabel.allowsDefaultTighteningForTruncation = false
@@ -70,6 +75,7 @@ class UserInfoViewController: UIViewController {
         saveButton.setTitle("Αποθήκευση", for: .normal)
         saveButton.backgroundColor = ColorScheme().theme
         saveButton.setTitleColor(ColorScheme().themeContrast, for: .normal)
+        saveButton.titleLabel?.font = Font(.installed(.HelveticaNeueBold), size: .standard(.h3)).instance
         saveButton.tintColor = .white
         saveButton.roundCorners(.allCorners, radius: 11)
         view.addSubview(saveButton)
