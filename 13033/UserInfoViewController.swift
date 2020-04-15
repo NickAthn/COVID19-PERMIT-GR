@@ -36,18 +36,22 @@ class UserInfoViewController: UIViewController {
     func setupView() {
         // View Title
         self.title = "Στοιχεία SMS"
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = ColorScheme().background
         
         descriptionLabel = UILabel(frame: .zero)
         descriptionLabel.text = "Συμπληρωσε τα στοιχεια που θα χρησημοποιουντε για την αποστολη SMS στο 13033. Τα στοιχεια σου θα αποθηκευτουν τοπικα στο κινητο προσβασιμα μονο απο εσενα."
+        descriptionLabel.textAlignment = .natural
+        descriptionLabel.adjustsFontSizeToFitWidth = true
+        descriptionLabel.allowsDefaultTighteningForTruncation = false
+        descriptionLabel.textColor = ColorScheme().backgroundConstast
         descriptionLabel.numberOfLines = 0;
         view.addSubview(descriptionLabel)
         
         fullNameTextField = UITextField(frame: .zero)
         fullNameTextField.attributedPlaceholder = NSAttributedString(string: "Ονοματεπώνυμο",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "#7F7F7F")])
+        attributes: [NSAttributedString.Key.foregroundColor: ColorScheme().surfaceContrastLight])
         fullNameTextField.roundCorners(.allCorners, radius: 11)
-        fullNameTextField.layer.backgroundColor = UIColor(hexString: "#F2F2F2").cgColor
+        fullNameTextField.backgroundColor = ColorScheme().surface
         fullNameTextField.setLeftPaddingPoints(14)
         fullNameTextField.setRightPaddingPoints(14)
 
@@ -55,16 +59,17 @@ class UserInfoViewController: UIViewController {
         
         homeAddressTextField = UITextField(frame: .zero)
         homeAddressTextField.attributedPlaceholder = NSAttributedString(string: "Διεύθυνση Κατοικίας",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "#7F7F7F")])
+                                                                        attributes: [NSAttributedString.Key.foregroundColor: ColorScheme().surfaceContrastLight])
         homeAddressTextField.roundCorners(.allCorners, radius: 11)
-        homeAddressTextField.layer.backgroundColor = UIColor(hexString: "#F2F2F2").cgColor
+        homeAddressTextField.backgroundColor = ColorScheme().surface
         homeAddressTextField.setLeftPaddingPoints(14)
         homeAddressTextField.setRightPaddingPoints(14)
         view.addSubview(homeAddressTextField)
         
         saveButton = UIButton(type: .custom)
         saveButton.setTitle("Αποθήκευση", for: .normal)
-        saveButton.backgroundColor = UIColor(hexString: "#44D7B6")
+        saveButton.backgroundColor = ColorScheme().theme
+        saveButton.setTitleColor(ColorScheme().themeContrast, for: .normal)
         saveButton.tintColor = .white
         saveButton.roundCorners(.allCorners, radius: 11)
         view.addSubview(saveButton)

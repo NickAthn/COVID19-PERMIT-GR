@@ -30,16 +30,17 @@ class MovementViewController: UIViewController {
     
     func setupView() {
         title = "Μετακίνηση"
-        view.backgroundColor = .white
+        view.backgroundColor = ColorScheme().background
         
         navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.navigationBar.tintColor = ColorScheme().backgroundConstast
         
         for movement in Movement.current {
             let mvButton = UIButton(frame: .zero)
             mvButton.setTitle(movement.title, for: .normal)
             mvButton.tag = movement.id
-            mvButton.backgroundColor = UIColor(hexString: "#F2F2F2")
-            mvButton.setTitleColor(UIColor(hexString: "#1B1F4A"), for: .normal)
+            mvButton.backgroundColor = ColorScheme().surface
+            mvButton.setTitleColor(ColorScheme().surfaceContrast, for: .normal)
             mvButton.roundCorners(.allCorners, radius: 11)
             buttonArray.append(mvButton)
         }
@@ -47,8 +48,8 @@ class MovementViewController: UIViewController {
         
         changeUserInfoButton = UIButton(frame: .zero)
         changeUserInfoButton.setTitle("Αλλαγή Στοιχείων", for: .normal)
-        changeUserInfoButton.backgroundColor = UIColor(hexString: "#44D7B6")
-        changeUserInfoButton.setTitleColor(.white, for: .normal)
+        changeUserInfoButton.backgroundColor = ColorScheme().theme
+        changeUserInfoButton.setTitleColor(ColorScheme().themeContrast, for: .normal)
         changeUserInfoButton.roundCorners(.allCorners, radius: 11)
         view.addSubview(changeUserInfoButton)
 

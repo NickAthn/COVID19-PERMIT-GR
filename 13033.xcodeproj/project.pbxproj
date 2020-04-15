@@ -19,6 +19,7 @@
 		01ABD47724470FC400BA39BD /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD47624470FC400BA39BD /* Typography.swift */; };
 		01ABD47B2447101E00BA39BD /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ABD47A2447101E00BA39BD /* ColorAssets.xcassets */; };
 		01ABD47D2447201800BA39BD /* UIVIewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD47C2447201800BA39BD /* UIVIewController+Extensions.swift */; };
+		01ABD47F244723F300BA39BD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD47E244723F300BA39BD /* Color.swift */; };
 		01CBD9982445C432000611DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBD9972445C432000611DF /* AppDelegate.swift */; };
 		01CBD99C2445C432000611DF /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBD99B2445C432000611DF /* UserInfoViewController.swift */; };
 		01CBD99F2445C432000611DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CBD99D2445C432000611DF /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		01ABD47624470FC400BA39BD /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		01ABD47A2447101E00BA39BD /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		01ABD47C2447201800BA39BD /* UIVIewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Extensions.swift"; sourceTree = "<group>"; };
+		01ABD47E244723F300BA39BD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		01CBD9942445C432000611DF /* 13033.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 13033.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CBD9972445C432000611DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CBD99B2445C432000611DF /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				01ABD47A2447101E00BA39BD /* ColorAssets.xcassets */,
 				01CBD9A52445C432000611DF /* LaunchScreen.storyboard */,
 				01ABD47624470FC400BA39BD /* Typography.swift */,
+				01ABD47E244723F300BA39BD /* Color.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				01ABD4602446153800BA39BD /* UIColor+Extensions.swift in Sources */,
 				01ABD46F244633B300BA39BD /* MessageService.swift in Sources */,
 				01CBD99C2445C432000611DF /* UserInfoViewController.swift in Sources */,
+				01ABD47F244723F300BA39BD /* Color.swift in Sources */,
 				01CBD9982445C432000611DF /* AppDelegate.swift in Sources */,
 				01ABD468244620A800BA39BD /* User.swift in Sources */,
 				01ABD47724470FC400BA39BD /* Typography.swift in Sources */,
