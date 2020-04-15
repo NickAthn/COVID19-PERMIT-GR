@@ -112,7 +112,15 @@ class MovementViewController: UIViewController {
 
     @objc func didTapMovementButton(sender: Any?) {
         guard let sender = sender as? UIButton else {return}
-        messaging.sendMessage(self, forUser: activeUser, withMovementID: sender.tag)
+        do {
+            try messaging.sendMessage(self, forUser: activeUser, withMovementID: sender.tag)
+        } catch {
+            if #available(iOS 13.0, *) {
+                // On newer version the systems send the appropriate messaging not available alert
+                AlertUtils.showAlert(self, title: "Cannot Send Message", message: "Text Messaging is not available")
+            }
+        }
+        
     }
     
     @objc func didTapChangeUserInfoButton(sender: Any?) {

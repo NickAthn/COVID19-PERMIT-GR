@@ -9,6 +9,10 @@
 import Foundation
 import MessageUI
 
+enum MessagingError: Error {
+    case cantSendMessage
+}
+
 class MessageService: NSObject  {
     var delegate: MFMessageComposeViewControllerDelegate!
     
@@ -17,7 +21,7 @@ class MessageService: NSObject  {
         delegate = self
     }
     
-    func sendMessage(_ vc: UIViewController ,forUser: User, withMovementID: Int) {
+    func sendMessage(_ vc: UIViewController ,forUser: User, withMovementID: Int) throws {
         let composeVC = MFMessageComposeViewController()
         composeVC.messageComposeDelegate = self
 
@@ -28,6 +32,8 @@ class MessageService: NSObject  {
         // Present the view controller modally.
         if MFMessageComposeViewController.canSendText() {
             vc.navigationController?.present(composeVC, animated: true, completion: nil)
+        } else {
+            throw MessagingError.cantSendMessage
         }
     }
     

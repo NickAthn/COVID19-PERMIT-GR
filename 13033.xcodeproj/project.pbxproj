@@ -25,6 +25,7 @@
 		01CBD99F2445C432000611DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CBD99D2445C432000611DF /* Main.storyboard */; };
 		01CBD9A42445C432000611DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CBD9A32445C432000611DF /* Assets.xcassets */; };
 		01CBD9A72445C432000611DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CBD9A52445C432000611DF /* LaunchScreen.storyboard */; };
+		01E1D09C24474F3900754E00 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E1D09B24474F3900754E00 /* AlertUtils.swift */; };
 		7A9E23DBB3C3B32E68651AF9 /* Pods_13033.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EBF689DF40880CD7977117 /* Pods_13033.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		01CBD9A32445C432000611DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01CBD9A62445C432000611DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01CBD9A82445C432000611DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E1D09B24474F3900754E00 /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		2EAC0081108B7A29D2FCDD54 /* Pods-13033.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-13033.debug.xcconfig"; path = "Target Support Files/Pods-13033/Pods-13033.debug.xcconfig"; sourceTree = "<group>"; };
 		39EBF689DF40880CD7977117 /* Pods_13033.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_13033.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6AE1939AD60EF5C80350EB /* Pods-13033.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-13033.release.xcconfig"; path = "Target Support Files/Pods-13033/Pods-13033.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		01CBD9962445C432000611DF /* 13033 */ = {
 			isa = PBXGroup;
 			children = (
+				01E1D09D24474F3D00754E00 /* Utilities */,
 				01ABD47524470F9300BA39BD /* Resources */,
 				01ABD4582446153800BA39BD /* Extensions */,
 				01ABD46D2446332000BA39BD /* Service */,
@@ -148,6 +151,14 @@
 				01CBD9A82445C432000611DF /* Info.plist */,
 			);
 			path = 13033;
+			sourceTree = "<group>";
+		};
+		01E1D09D24474F3D00754E00 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				01E1D09B24474F3900754E00 /* AlertUtils.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		4501754FC1C12C1C4AC4B32F /* Frameworks */ = {
@@ -288,6 +299,7 @@
 				01ABD46A244625FF00BA39BD /* MovementViewController.swift in Sources */,
 				01ABD46C244626BA00BA39BD /* Movement.swift in Sources */,
 				01ABD47D2447201800BA39BD /* UIVIewController+Extensions.swift in Sources */,
+				01E1D09C24474F3900754E00 /* AlertUtils.swift in Sources */,
 				01ABD4612446153800BA39BD /* CALayer+Extensions.swift in Sources */,
 				01ABD4602446153800BA39BD /* UIColor+Extensions.swift in Sources */,
 				01ABD46F244633B300BA39BD /* MessageService.swift in Sources */,
