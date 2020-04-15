@@ -14,6 +14,11 @@
 		01ABD46A244625FF00BA39BD /* MovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD469244625FF00BA39BD /* MovementViewController.swift */; };
 		01ABD46C244626BA00BA39BD /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD46B244626BA00BA39BD /* Movement.swift */; };
 		01ABD46F244633B300BA39BD /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD46E244633B300BA39BD /* MessageService.swift */; };
+		01ABD47224470DF900BA39BD /* TextFieldPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD47124470DF900BA39BD /* TextFieldPlus.swift */; };
+		01ABD47424470F3800BA39BD /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD47324470F3800BA39BD /* UITextField+Extensions.swift */; };
+		01ABD47724470FC400BA39BD /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD47624470FC400BA39BD /* Typography.swift */; };
+		01ABD47B2447101E00BA39BD /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ABD47A2447101E00BA39BD /* ColorAssets.xcassets */; };
+		01ABD47D2447201800BA39BD /* UIVIewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD47C2447201800BA39BD /* UIVIewController+Extensions.swift */; };
 		01CBD9982445C432000611DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBD9972445C432000611DF /* AppDelegate.swift */; };
 		01CBD99C2445C432000611DF /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CBD99B2445C432000611DF /* UserInfoViewController.swift */; };
 		01CBD99F2445C432000611DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CBD99D2445C432000611DF /* Main.storyboard */; };
@@ -30,6 +35,11 @@
 		01ABD469244625FF00BA39BD /* MovementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementViewController.swift; sourceTree = "<group>"; };
 		01ABD46B244626BA00BA39BD /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		01ABD46E244633B300BA39BD /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		01ABD47124470DF900BA39BD /* TextFieldPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPlus.swift; sourceTree = "<group>"; };
+		01ABD47324470F3800BA39BD /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		01ABD47624470FC400BA39BD /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		01ABD47A2447101E00BA39BD /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
+		01ABD47C2447201800BA39BD /* UIVIewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Extensions.swift"; sourceTree = "<group>"; };
 		01CBD9942445C432000611DF /* 13033.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 13033.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CBD9972445C432000611DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CBD99B2445C432000611DF /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +70,8 @@
 				01ABD45A2446153800BA39BD /* UIView+Extensions.swift */,
 				01ABD45B2446153800BA39BD /* UIColor+Extensions.swift */,
 				01ABD45C2446153800BA39BD /* CALayer+Extensions.swift */,
+				01ABD47324470F3800BA39BD /* UITextField+Extensions.swift */,
+				01ABD47C2447201800BA39BD /* UIVIewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -79,6 +91,25 @@
 				01ABD46E244633B300BA39BD /* MessageService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		01ABD47024470DBA00BA39BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01ABD47124470DF900BA39BD /* TextFieldPlus.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01ABD47524470F9300BA39BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01CBD9A32445C432000611DF /* Assets.xcassets */,
+				01ABD47A2447101E00BA39BD /* ColorAssets.xcassets */,
+				01CBD9A52445C432000611DF /* LaunchScreen.storyboard */,
+				01ABD47624470FC400BA39BD /* Typography.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		01CBD98B2445C432000611DF = {
@@ -102,15 +133,15 @@
 		01CBD9962445C432000611DF /* 13033 */ = {
 			isa = PBXGroup;
 			children = (
+				01ABD47524470F9300BA39BD /* Resources */,
 				01ABD4582446153800BA39BD /* Extensions */,
 				01ABD46D2446332000BA39BD /* Service */,
 				01ABD46624461DC900BA39BD /* Model */,
+				01ABD47024470DBA00BA39BD /* View */,
 				01CBD9972445C432000611DF /* AppDelegate.swift */,
 				01CBD99B2445C432000611DF /* UserInfoViewController.swift */,
 				01ABD469244625FF00BA39BD /* MovementViewController.swift */,
 				01CBD99D2445C432000611DF /* Main.storyboard */,
-				01CBD9A32445C432000611DF /* Assets.xcassets */,
-				01CBD9A52445C432000611DF /* LaunchScreen.storyboard */,
 				01CBD9A82445C432000611DF /* Info.plist */,
 			);
 			path = 13033;
@@ -195,6 +226,7 @@
 			files = (
 				01CBD9A72445C432000611DF /* LaunchScreen.storyboard in Resources */,
 				01CBD9A42445C432000611DF /* Assets.xcassets in Resources */,
+				01ABD47B2447101E00BA39BD /* ColorAssets.xcassets in Resources */,
 				01CBD99F2445C432000611DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,15 +280,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01ABD47424470F3800BA39BD /* UITextField+Extensions.swift in Sources */,
 				01ABD45F2446153800BA39BD /* UIView+Extensions.swift in Sources */,
 				01ABD46A244625FF00BA39BD /* MovementViewController.swift in Sources */,
 				01ABD46C244626BA00BA39BD /* Movement.swift in Sources */,
+				01ABD47D2447201800BA39BD /* UIVIewController+Extensions.swift in Sources */,
 				01ABD4612446153800BA39BD /* CALayer+Extensions.swift in Sources */,
 				01ABD4602446153800BA39BD /* UIColor+Extensions.swift in Sources */,
 				01ABD46F244633B300BA39BD /* MessageService.swift in Sources */,
 				01CBD99C2445C432000611DF /* UserInfoViewController.swift in Sources */,
 				01CBD9982445C432000611DF /* AppDelegate.swift in Sources */,
 				01ABD468244620A800BA39BD /* User.swift in Sources */,
+				01ABD47724470FC400BA39BD /* Typography.swift in Sources */,
+				01ABD47224470DF900BA39BD /* TextFieldPlus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -386,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -404,7 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X5PNQ55UN4;
 				INFOPLIST_FILE = 13033/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X5PNQ55UN4;
 				INFOPLIST_FILE = 13033/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

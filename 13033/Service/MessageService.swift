@@ -14,9 +14,7 @@ class MessageService: NSObject  {
     
     override init() {
         super.init()
-        
         delegate = self
-        
     }
     
     func sendMessage(_ vc: UIViewController ,forUser: User, withMovementID: Int) {

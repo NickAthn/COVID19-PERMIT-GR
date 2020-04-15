@@ -18,18 +18,19 @@ class UserInfoViewController: UIViewController {
     var homeAddressTextField: UITextField!
     var saveButton: UIButton!
     
+    var activeUser: User!
+    convenience init(user: User) {
+        self.init()
+        activeUser = user
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupView()
         updateViewConstraints()
+        setupData()
         setupActions()
-        
-        if #available(iOS 13.0, *) {
-            isModalInPresentation = true
-        } else {
-            // Fallback on earlier versions
-        }
     }
     
     func setupView() {
@@ -47,6 +48,9 @@ class UserInfoViewController: UIViewController {
         attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "#7F7F7F")])
         fullNameTextField.roundCorners(.allCorners, radius: 11)
         fullNameTextField.layer.backgroundColor = UIColor(hexString: "#F2F2F2").cgColor
+        fullNameTextField.setLeftPaddingPoints(14)
+        fullNameTextField.setRightPaddingPoints(14)
+
         view.addSubview(fullNameTextField)
         
         homeAddressTextField = UITextField(frame: .zero)
@@ -54,6 +58,8 @@ class UserInfoViewController: UIViewController {
         attributes: [NSAttributedString.Key.foregroundColor: UIColor(hexString: "#7F7F7F")])
         homeAddressTextField.roundCorners(.allCorners, radius: 11)
         homeAddressTextField.layer.backgroundColor = UIColor(hexString: "#F2F2F2").cgColor
+        homeAddressTextField.setLeftPaddingPoints(14)
+        homeAddressTextField.setRightPaddingPoints(14)
         view.addSubview(homeAddressTextField)
         
         saveButton = UIButton(type: .custom)
@@ -62,6 +68,13 @@ class UserInfoViewController: UIViewController {
         saveButton.tintColor = .white
         saveButton.roundCorners(.allCorners, radius: 11)
         view.addSubview(saveButton)
+    }
+    
+    func setupData() {
+        if activeUser != nil {
+            fullNameTextField.text = activeUser.fullName
+            homeAddressTextField.text = activeUser.address
+        }
     }
     
     func setupActions() {
@@ -108,6 +121,8 @@ class UserInfoViewController: UIViewController {
                 let user = User(fullName: fullNameTextField.text!.capitalized, address: homeAddressTextField.text!.capitalized)
                 do {
                     try Disk.save(user, to: .applicationSupport, as: "user.json")
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userUpdated"), object: nil)
+
                     navigateToMovement()
                 } catch {
                     print("Error saving user info")
@@ -117,7 +132,11 @@ class UserInfoViewController: UIViewController {
     }
     
     func navigateToMovement() {
-        let mVC = MovementViewController()
-        self.navigationController?.setViewControllers([mVC], animated: true)
+        if self.isModal {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            let mVC = MovementViewController()
+            self.navigationController?.setViewControllers([mVC], animated: true)
+        }
     }
 }

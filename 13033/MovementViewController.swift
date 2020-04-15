@@ -32,11 +32,7 @@ class MovementViewController: UIViewController {
         title = "Μετακίνηση"
         view.backgroundColor = .white
         
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        } else {
-            // Fallback on earlier versions
-        }
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         for movement in Movement.current {
             let mvButton = UIButton(frame: .zero)
@@ -64,9 +60,11 @@ class MovementViewController: UIViewController {
         }
         
         changeUserInfoButton.addTarget(self, action: #selector(didTapChangeUserInfoButton(sender:)), for: .touchUpInside)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.fetchViewData), name:NSNotification.Name(rawValue: "userUpdated"), object: nil)
+
     }
     
-    func fetchViewData() {
+    @objc func fetchViewData() {
         do {
         activeUser = try Disk.retrieve("user.json", from: .applicationSupport, as: User.self)
         } catch {
@@ -114,7 +112,7 @@ class MovementViewController: UIViewController {
     }
     
     @objc func didTapChangeUserInfoButton(sender: Any?) {
-        let vc = UserInfoViewController()
-        self.present(vc, animated: true, completion: nil)
+        let vc = UserInfoViewController(user: activeUser)
+        self.present(vc, animated: true)
     }
 }

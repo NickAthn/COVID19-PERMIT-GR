@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import Disk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let viewController = MovementViewController()
-        
+        let viewController: UIViewController!
+
+        do {
+            // Check if user exists
+            try Disk.retrieve("user.json", from: .applicationSupport, as: User.self)
+            // if yes go to
+            viewController = MovementViewController()
+        } catch {
+            // if user doesnt exist ask for new
+            viewController = UserInfoViewController()
+        }
+
         let navigation = UINavigationController()
         navigation.viewControllers = [viewController]
         
