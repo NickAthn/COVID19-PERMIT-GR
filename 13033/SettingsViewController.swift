@@ -61,6 +61,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.textColor = setting.isLink ? UIColor.systemBlue : ColorScheme().surfaceContrast
         cell.imageView?.image = setting.image
         cell.id = setting.id
+        cell.imageView?.roundCorners(.allCorners, radius: 4)
         return cell
     }
     

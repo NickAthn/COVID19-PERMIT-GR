@@ -13,6 +13,7 @@ enum SettingID: String {
     bug = "bug",
     terms = "terms",
     privacy = "privacy",
+    share = "share",
     review = "review"
 }
 
@@ -32,11 +33,17 @@ struct Setting {
     static var sections = [
         SettingsSection(
             title: "HELP",
-            footer: "Version 1",
+            footer: "",
             settings: [
-                Setting(id: "bug", title: "Report a bug", image: UIImage(named: "appStoreIcon")!),
-                Setting(id: "terms", title: "Terms of Use", image: UIImage(named: "appStoreIcon")!),
-                Setting(id: "privacy", title: "Privacy Policy", image: UIImage(named: "appStoreIcon")!),
+                Setting(id: "bug", title: "Report a bug", image: UIImage(named: "bugReportIcon")!),
+                Setting(id: "terms", title: "Terms of Use", image: UIImage(named: "termsOfUseIcon")!),
+                Setting(id: "privacy", title: "Privacy Policy", image: UIImage(named: "privacyPolicyIcon")!)
+        ]),
+        SettingsSection(
+            title: "LOVE THE APP? ❤️",
+            footer: "Version 1.",
+            settings: [
+                Setting(id: "share", title: "Share", image: UIImage(named: "shareIcon")!),
                 Setting(id: "review", title: "Review 13033 App", image: UIImage(named: "appStoreIcon")!, isLink: true)
         ])
     ]
