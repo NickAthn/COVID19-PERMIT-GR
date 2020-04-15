@@ -31,6 +31,9 @@ class UserInfoViewController: UIViewController {
         updateViewConstraints()
         setupData()
         setupActions()
+        
+        fullNameTextField.delegate = self
+        homeAddressTextField.delegate = self
     }
     
     func setupView() {
@@ -142,7 +145,10 @@ class UserInfoViewController: UIViewController {
     }
     
     func navigateToMovement() {
-        if self.isModal {
+        
+        if self.navigationController?.viewControllers.first is MovementViewController {
+            navigationController?.popToRootViewController(animated: true)
+        } else if self.isModal {
             self.dismiss(animated: true, completion: nil)
         } else {
             let mVC = MovementViewController()
@@ -151,4 +157,15 @@ class UserInfoViewController: UIViewController {
     }
 }
 
-//extension UserInfoViewController: 
+extension UserInfoViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == fullNameTextField { // Switch focus to other text field
+            homeAddressTextField.becomeFirstResponder()
+        } else if textField == homeAddressTextField {
+            didTapSaveButton(sender: nil)
+        }
+        return true
+    }
+
+}
