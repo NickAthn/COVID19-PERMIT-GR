@@ -9,7 +9,7 @@
 import UIKit
 import EasyPeasy
 import SafariServices
-
+import Buglife
 
 class SettingsViewController: UIViewController {
     var shouldUpdateConstraints = true
@@ -29,6 +29,7 @@ class SettingsViewController: UIViewController {
         view.backgroundColor = ColorScheme().background
         
         tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.backgroundColor = ColorScheme().background
         view.addSubview(tableView)
         
     }
@@ -87,6 +88,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if selectedCell.id == SettingID.share.rawValue {
             StoreUtils.shareApp(self)
+        }
+        if selectedCell.id == SettingID.bug.rawValue {
+            AlertUtils.showAlert(self, title: NSLocalizedString("bugAlertTitle", comment: ""), message: NSLocalizedString("bugAlert", comment: ""))
         }
     }
         

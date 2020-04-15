@@ -8,12 +8,17 @@
 
 import UIKit
 import Disk
+import Buglife
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // For the bug reporting
+        Buglife.shared().start(withEmail: "nick@athanasiou.me")
+        Buglife.shared().invocationOptions = .screenshot
+
         let viewController: UIViewController!
 
         do {

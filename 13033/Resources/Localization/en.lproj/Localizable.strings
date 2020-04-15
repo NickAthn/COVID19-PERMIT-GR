@@ -11,7 +11,7 @@
 // Info Setup View
 "infoViewTitle" = "SMS Information";
 
-"infoDescription" = " The information below will be used to send the SMS to 13033 for the permit. The information will be store localy and will be accessible only through this device.";
+"infoDescription" = " The information below will be used to send an SMS to 13033 for the required movement permit. The information will be stored localy and will be accessible only through this device.";
 "namePlaceholder" = "Full Name";
 "addressPlaceholder" = "Home Address";
 "saveButton" = "Save";
@@ -43,3 +43,7 @@
 
 // App Share
 "shareMessage" = "Hey! I've been using 13033 - Greek Permit for a while and I love it! 13033 - Greek Permit is a free app that lets you create the required movement permit messages and send them to 13033 with a push of a button. Check it out.";
+
+// Bug Report
+"bugAlert" = "To report a bug just take a screenshot using your device while you are on the application, the app will automaticaly detect it and a promt will become visible.";
+"bugAlertTitle" = "How to report a bug";
