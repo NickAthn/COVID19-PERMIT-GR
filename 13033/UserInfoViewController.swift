@@ -61,6 +61,7 @@ class UserInfoViewController: UIViewController {
         fullNameTextField.backgroundColor = ColorScheme().surface
         fullNameTextField.setLeftPaddingPoints(14)
         fullNameTextField.setRightPaddingPoints(14)
+        fullNameTextField.returnKeyType = .next
 
         view.addSubview(fullNameTextField)
         
@@ -71,6 +72,8 @@ class UserInfoViewController: UIViewController {
         homeAddressTextField.backgroundColor = ColorScheme().surface
         homeAddressTextField.setLeftPaddingPoints(14)
         homeAddressTextField.setRightPaddingPoints(14)
+        homeAddressTextField.returnKeyType = .done
+
         view.addSubview(homeAddressTextField)
         
         saveButton = UIButton(type: .custom)
