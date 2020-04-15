@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = navigation
         self.window?.makeKeyAndVisible()
         
+        self.window?.tintColor = ColorScheme().theme
         return true
     }
 }

@@ -17,7 +17,6 @@ class UserInfoViewController: UIViewController {
     var fullNameTextField: UITextField!
     var homeAddressTextField: UITextField!
     var saveButton: UIButton!
-    var settingsNavItem : UINavigationItem!
     
     var activeUser: User!
     convenience init(user: User) {

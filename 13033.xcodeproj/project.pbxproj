@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011E7F2924475732004484D6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E7F2824475732004484D6 /* SettingsViewController.swift */; };
+		011E7F2B24475CAF004484D6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E7F2A24475CAF004484D6 /* Setting.swift */; };
+		011E7F2E2447622E004484D6 /* ILTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E7F2D2447622E004484D6 /* ILTableViewCell.swift */; };
+		011E7F3024476BE0004484D6 /* StoreUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E7F2F24476BE0004484D6 /* StoreUtils.swift */; };
 		01ABD45F2446153800BA39BD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD45A2446153800BA39BD /* UIView+Extensions.swift */; };
 		01ABD4602446153800BA39BD /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD45B2446153800BA39BD /* UIColor+Extensions.swift */; };
 		01ABD4612446153800BA39BD /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD45C2446153800BA39BD /* CALayer+Extensions.swift */; };
@@ -30,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		011E7F2824475732004484D6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		011E7F2A24475CAF004484D6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		011E7F2D2447622E004484D6 /* ILTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILTableViewCell.swift; sourceTree = "<group>"; };
+		011E7F2F24476BE0004484D6 /* StoreUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUtils.swift; sourceTree = "<group>"; };
 		01ABD45A2446153800BA39BD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		01ABD45B2446153800BA39BD /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		01ABD45C2446153800BA39BD /* CALayer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
@@ -68,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011E7F2C24475E3A004484D6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				011E7F2D2447622E004484D6 /* ILTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		01ABD4582446153800BA39BD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +101,7 @@
 			children = (
 				01ABD467244620A800BA39BD /* User.swift */,
 				01ABD46B244626BA00BA39BD /* Movement.swift */,
+				011E7F2A24475CAF004484D6 /* Setting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +117,7 @@
 		01ABD47024470DBA00BA39BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				011E7F2C24475E3A004484D6 /* TableViewCells */,
 				01ABD47124470DF900BA39BD /* TextFieldPlus.swift */,
 			);
 			path = View;
@@ -147,6 +165,7 @@
 				01CBD9972445C432000611DF /* AppDelegate.swift */,
 				01CBD99B2445C432000611DF /* UserInfoViewController.swift */,
 				01ABD469244625FF00BA39BD /* MovementViewController.swift */,
+				011E7F2824475732004484D6 /* SettingsViewController.swift */,
 				01CBD99D2445C432000611DF /* Main.storyboard */,
 				01CBD9A82445C432000611DF /* Info.plist */,
 			);
@@ -157,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				01E1D09B24474F3900754E00 /* AlertUtils.swift */,
+				011E7F2F24476BE0004484D6 /* StoreUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -301,13 +321,17 @@
 				01ABD47D2447201800BA39BD /* UIVIewController+Extensions.swift in Sources */,
 				01E1D09C24474F3900754E00 /* AlertUtils.swift in Sources */,
 				01ABD4612446153800BA39BD /* CALayer+Extensions.swift in Sources */,
+				011E7F2924475732004484D6 /* SettingsViewController.swift in Sources */,
 				01ABD4602446153800BA39BD /* UIColor+Extensions.swift in Sources */,
 				01ABD46F244633B300BA39BD /* MessageService.swift in Sources */,
 				01CBD99C2445C432000611DF /* UserInfoViewController.swift in Sources */,
 				01ABD47F244723F300BA39BD /* Color.swift in Sources */,
+				011E7F2E2447622E004484D6 /* ILTableViewCell.swift in Sources */,
 				01CBD9982445C432000611DF /* AppDelegate.swift in Sources */,
+				011E7F3024476BE0004484D6 /* StoreUtils.swift in Sources */,
 				01ABD468244620A800BA39BD /* User.swift in Sources */,
 				01ABD47724470FC400BA39BD /* Typography.swift in Sources */,
+				011E7F2B24475CAF004484D6 /* Setting.swift in Sources */,
 				01ABD47224470DF900BA39BD /* TextFieldPlus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

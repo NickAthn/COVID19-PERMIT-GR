@@ -15,7 +15,7 @@ class MovementViewController: UIViewController {
 
     var buttonArray: [UIButton] = []
     var changeUserInfoButton: UIButton!
-    
+
     var activeUser: User!
     
     var messaging = MessageService()
@@ -33,7 +33,10 @@ class MovementViewController: UIViewController {
         view.backgroundColor = ColorScheme().background
         
         navigationController?.navigationBar.prefersLargeTitles = true
-       
+
+        let settings = UIBarButtonItem(image: UIImage(named: "gear"), style: .plain, target: self, action: #selector(didTapSettingNavButton(sender:)))
+        navigationItem.setRightBarButton(settings, animated: true)
+//        navigationController?.navigationItem.setRightBarButton(settings, animated: true)
         
         for movement in Movement.current {
             let mvButton = UIButton(frame: .zero)
@@ -127,6 +130,11 @@ class MovementViewController: UIViewController {
         let vc = UserInfoViewController(user: activeUser)
 //        let nav = UINavigationController(rootViewController: vc)
 //        self.present(nav, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func didTapSettingNavButton(sender: Any?) {
+        let vc = SettingsViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
