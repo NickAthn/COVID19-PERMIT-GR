@@ -8,7 +8,7 @@
 
 import UIKit
 import EasyPeasy
-
+import SafariServices
 
 
 class SettingsViewController: UIViewController {
@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
     }
     
     func setupView() {
-        title = "Settings"
+        title = NSLocalizedString("settingsTitle", comment: "The settings view navBar title")
         view.backgroundColor = ColorScheme().background
         
         tableView = UITableView(frame: .zero, style: .grouped)
@@ -78,6 +78,15 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         guard let selectedCell = tableView.cellForRow(at: indexPath) as? ILTableViewCell else {return}
         if selectedCell.id == SettingID.review.rawValue {
             StoreUtils.rateApp()
+        }
+        if selectedCell.id == SettingID.terms.rawValue {
+            WebUtils.showSite(self, url: URL(string: "https://athanasiou.me/legal/app-13033/terms-of-service.html")!)
+        }
+        if selectedCell.id == SettingID.privacy.rawValue {
+            WebUtils.showSite(self, url: URL(string: "https://athanasiou.me/legal/app-13033/privacy.html")!)
+        }
+        if selectedCell.id == SettingID.share.rawValue {
+            StoreUtils.shareApp(self)
         }
     }
         

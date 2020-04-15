@@ -6,7 +6,7 @@
 //  Copyright © 2020 Nikolaos Athanasiou. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import StoreKit
 
 class StoreUtils {
@@ -14,7 +14,7 @@ class StoreUtils {
         if #available(iOS 10.3, *) {
             SKStoreReviewController.requestReview()
 
-        } else if let url = URL(string: "itms-apps://itunes.apple.com/app/" + "appId") {
+        } else if let url = URL(string: "itms-apps://itunes.apple.com/app/" + "1508157406") {
             if #available(iOS 10, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
 
@@ -22,6 +22,15 @@ class StoreUtils {
                 UIApplication.shared.openURL(url)
             }
         }
+    }
+    
+    static func shareApp(_ vc: UIViewController) {
+        let items: [Any] = [
+            NSLocalizedString("shareMessage", comment: ""),
+            URL(string: "https://www.apple.com")!
+        ]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        vc.present(ac, animated: true)
     }
 
 }

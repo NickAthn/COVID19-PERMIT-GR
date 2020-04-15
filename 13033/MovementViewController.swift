@@ -29,7 +29,7 @@ class MovementViewController: UIViewController {
     }
     
     func setupView() {
-        title = "Μετακίνηση"
+        title = NSLocalizedString("movementTitle", comment: "The Movement view navBar title")
         view.backgroundColor = ColorScheme().background
         
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -52,7 +52,7 @@ class MovementViewController: UIViewController {
         buttonArray.forEach { view.addSubview($0) }
         
         changeUserInfoButton = UIButton(frame: .zero)
-        changeUserInfoButton.setTitle("Αλλαγή Στοιχείων", for: .normal)
+        changeUserInfoButton.setTitle(NSLocalizedString("changeInfoButton", comment: ""), for: .normal)
         changeUserInfoButton.titleLabel?.font = Font(.installed(.HelveticaNeueBold), size: .standard(.h3)).instance
         changeUserInfoButton.backgroundColor = ColorScheme().theme
         changeUserInfoButton.setTitleColor(ColorScheme().themeContrast, for: .normal)

@@ -1,0 +1,41 @@
+/* 
+  Greek.strings
+  13033
+
+  Created by Nikolaos Athanasiou on 15/4/20.
+  Copyright © 2020 Nikolaos Athanasiou. All rights reserved.
+*/
+
+// Info Setup View
+"infoViewTitle" = "Στοιχεία SMS";
+"infoDescription" = "Τα παρακάτω στοιχεία θα χρησιμοποιούνται για την αποστολή SMS στο 13033. Τα στοιχειά σου θα αποθηκευτούν τοπικά στο κινητό.";
+"namePlaceholder" = "Ονοματεπώνυμο";
+"addressPlaceholder" = "Διεύθυνση Κατοικίας";
+"saveButton" = "Αποθήκευση";
+
+// Movement View
+"movementTitle" = "Μετακίνηση";
+"b1" = "Φαρμακείο/Γιατρός";
+"b2" = "Σούπερ Μάρκετ";
+"b3" = "Τράπεζα";
+"b4" = "Παροχή Βοήθειας";
+"b5" = "Τελετή / Διαζευγμένοι Γονείς";
+"b6" = "Σωματική Άσκηση / Κίνηση με κατοικίδιο";
+"changeInfoButton" = "Αλλαγή Στοιχείων";
+
+// Settings View
+
+"settingsTitle" = "Ρυθμίσεις";
+
+"helpHeader" = "ΒΟΗΘΕΙΑ";
+"bugSetting" = "Αναφορά σφάλματος";
+"terms" = "Οροι χρήσης";
+"privacyPolicy" = "Πολιτική απορρήτου";
+
+"loveHeader" = "ΣΟΥ ΑΡΕΣΕΙ Η ΕΦΑΡΜΟΓΗ ?❤️";
+"share" = "Κοινοποίηση";
+"review" = "Άσε μία κριτική";
+"loveFooter" = "Version 1.";
+
+// App Share
+"shareMessage" = "Γεια σου! Γνωρίζεις ότι μπορείς να στέλνεις εύκολα τα μηνύματα μετακίνησης σου στο 13033 με το πάτημα ενός κουμπιού; Κατεβάζοντας την εφαρμογή 13033 - Greek Permit μπορείς. Τσέκαρε τη.";

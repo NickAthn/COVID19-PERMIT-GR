@@ -13,11 +13,11 @@ struct Movement {
     var title: String
     
     static var current = [
-        Movement(id: 1, title: "Φαρμακείο/Γιατρός"),
-        Movement(id: 2, title: "Σούπερ Μάρκετ"),
-        Movement(id: 3, title: "Τράπεζα"),
-        Movement(id: 4, title: "Παροχή Βοήθειας"),
-        Movement(id: 5, title: "Τελετή / Διαζευγμένοι Γονείς"),
-        Movement(id: 6, title: "Σωματική Άσκηση / Κίνηση με κατοικίδιο")
+        Movement(id: 1, title: NSLocalizedString("b1", comment: "The reason for the movement permit")),
+        Movement(id: 2, title: NSLocalizedString("b2", comment: "The reason for the movement permit")),
+        Movement(id: 3, title: NSLocalizedString("b3", comment: "The reason for the movement permit")),
+        Movement(id: 4, title: NSLocalizedString("b4", comment: "The reason for the movement permit")),
+        Movement(id: 5, title: NSLocalizedString("b5", comment: "The reason for the movement permit")),
+        Movement(id: 6, title: NSLocalizedString("b6", comment: "The reason for the movement permit"))
     ]
 }

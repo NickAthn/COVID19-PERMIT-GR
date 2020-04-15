@@ -32,19 +32,19 @@ struct Setting {
     
     static var sections = [
         SettingsSection(
-            title: "HELP",
+            title: NSLocalizedString("helpHeader", comment: ""),
             footer: "",
             settings: [
-                Setting(id: "bug", title: "Report a bug", image: UIImage(named: "bugReportIcon")!),
-                Setting(id: "terms", title: "Terms of Use", image: UIImage(named: "termsOfUseIcon")!),
-                Setting(id: "privacy", title: "Privacy Policy", image: UIImage(named: "privacyPolicyIcon")!)
+                Setting(id: "bug", title: NSLocalizedString("bugSetting", comment: ""), image: UIImage(named: "bugReportIcon")!),
+                Setting(id: "terms", title: NSLocalizedString("terms", comment: ""), image: UIImage(named: "termsOfUseIcon")!),
+                Setting(id: "privacy", title: NSLocalizedString("privacyPolicy", comment: ""), image: UIImage(named: "privacyPolicyIcon")!)
         ]),
         SettingsSection(
-            title: "LOVE THE APP? ❤️",
-            footer: "Version 1.",
+            title: NSLocalizedString("loveHeader", comment: ""),
+            footer: NSLocalizedString("loveFooter", comment: ""),
             settings: [
-                Setting(id: "share", title: "Share", image: UIImage(named: "shareIcon")!),
-                Setting(id: "review", title: "Review 13033 App", image: UIImage(named: "appStoreIcon")!, isLink: true)
+                Setting(id: "share", title: NSLocalizedString("share", comment: ""), image: UIImage(named: "shareIcon")!),
+                Setting(id: "review", title: NSLocalizedString("review", comment: ""), image: UIImage(named: "appStoreIcon")!, isLink: true)
         ])
     ]
 }
