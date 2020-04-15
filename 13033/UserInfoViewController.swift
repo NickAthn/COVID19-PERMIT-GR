@@ -211,8 +211,13 @@ extension UserInfoViewController: UITextFieldDelegate {
         return true
     }
 
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        nameFieldErrorLabel.isHidden = true
-        homeFieldErrorLabel.isHidden = true
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !(textField.text?.isEmpty ?? false) {
+            if textField == fullNameTextField {
+                nameFieldErrorLabel.isHidden = true
+            } else {
+                homeFieldErrorLabel.isHidden = true
+            }
+        }
     }
 }
