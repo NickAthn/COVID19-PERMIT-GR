@@ -1,0 +1,24 @@
+PODS:
+  - Buglife (2.10.1)
+  - Disk (0.6.4)
+  - EasyPeasy (1.9.0)
+
+DEPENDENCIES:
+  - Buglife
+  - Disk
+  - EasyPeasy
+
+SPEC REPOS:
+  trunk:
+    - Buglife
+    - Disk
+    - EasyPeasy
+
+SPEC CHECKSUMS:
+  Buglife: bc8e4931ebe37b2901c6dbcb0ca6dd76f62a98c3
+  Disk: dcee5c2e98fb72f9a924cde8da8435b08244a80e
+  EasyPeasy: 19a84ef8f8bbcf925b9fecc29d1d78b7dab96718
+
+PODFILE CHECKSUM: 20e5cc96e54f48541c142b5ca0abf3f5b7fd7faa
+
+COCOAPODS: 1.9.1
