@@ -47,3 +47,7 @@
 // Bug Report
 "bugAlert" = "To report a bug just take a screenshot using your device while you are on the application, the app will automaticaly detect it and a promt will become visible.";
 "bugAlertTitle" = "How to report a bug";
+
+// Errors
+
+"emptyField" = "*This field cannot be empty!";

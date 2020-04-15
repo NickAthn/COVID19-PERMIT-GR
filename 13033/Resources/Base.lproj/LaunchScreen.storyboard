@@ -18,16 +18,17 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="zX1-kU-xR1">
                                 <rect key="frame" x="127" y="368" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zX1-kU-xR1" secondAttribute="height" multiplier="1:1" id="MNX-fO-yKo"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zX1-kU-xR1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="GTa-44-oCG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zX1-kU-xR1" secondAttribute="trailing" constant="127" id="SCT-1Y-oQo"/>
-                            <constraint firstItem="zX1-kU-xR1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="324" id="W0F-Iu-SMB"/>
-                            <constraint firstItem="zX1-kU-xR1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XQj-u9-KTN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zX1-kU-xR1" secondAttribute="bottom" constant="334" id="eXP-yX-Wdu"/>
-                            <constraint firstItem="zX1-kU-xR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="geh-Ld-8Gx"/>
+                            <constraint firstItem="zX1-kU-xR1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GIg-mZ-wDM"/>
+                            <constraint firstItem="zX1-kU-xR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="IsM-gs-hdJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zX1-kU-xR1" secondAttribute="trailing" constant="127" id="c9S-gi-Ze8"/>
+                            <constraint firstItem="zX1-kU-xR1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jBX-9d-K7S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

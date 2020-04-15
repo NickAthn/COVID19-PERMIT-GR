@@ -14,8 +14,12 @@ class UserInfoViewController: UIViewController {
     var shouldUpdateConstraints = true
     
     var descriptionLabel: UILabel!
-    var fullNameTextField: UITextField!
-    var homeAddressTextField: UITextField!
+    
+    var nameFieldErrorLabel: UILabel!
+    var fullNameTextField: SpringTextField!
+    
+    var homeFieldErrorLabel: UILabel!
+    var homeAddressTextField: SpringTextField!
     var saveButton: UIButton!
     
     var activeUser: User!
@@ -42,7 +46,21 @@ class UserInfoViewController: UIViewController {
         self.view.backgroundColor = ColorScheme().background
         
         
-        
+        homeFieldErrorLabel = UILabel(frame: .zero)
+        homeFieldErrorLabel.text = NSLocalizedString("emptyField", comment: "")
+        homeFieldErrorLabel.font = Font(.installed(.HelveticaNeue), size: .standard(.h6)).instance
+        homeFieldErrorLabel.textAlignment = .left
+        homeFieldErrorLabel.textColor = UIColor.systemRed
+        homeFieldErrorLabel.isHidden = true
+        view.addSubview(homeFieldErrorLabel)
+        nameFieldErrorLabel = UILabel(frame: .zero)
+        nameFieldErrorLabel.text = NSLocalizedString("emptyField", comment: "")
+        nameFieldErrorLabel.font = Font(.installed(.HelveticaNeue), size: .standard(.h6)).instance
+        nameFieldErrorLabel.textAlignment = .left
+        nameFieldErrorLabel.textColor = UIColor.systemRed
+        nameFieldErrorLabel.isHidden = true
+        view.addSubview(nameFieldErrorLabel)
+
         
         descriptionLabel = UILabel(frame: .zero)
         descriptionLabel.text = NSLocalizedString("infoDescription", comment: "")
@@ -54,7 +72,7 @@ class UserInfoViewController: UIViewController {
         descriptionLabel.numberOfLines = 0;
         view.addSubview(descriptionLabel)
         
-        fullNameTextField = UITextField(frame: .zero)
+        fullNameTextField = SpringTextField(frame: .zero)
         fullNameTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("namePlaceholder", comment: ""),
         attributes: [NSAttributedString.Key.foregroundColor: ColorScheme().surfaceContrastLight])
         fullNameTextField.roundCorners(.allCorners, radius: 11)
@@ -65,7 +83,7 @@ class UserInfoViewController: UIViewController {
 
         view.addSubview(fullNameTextField)
         
-        homeAddressTextField = UITextField(frame: .zero)
+        homeAddressTextField = SpringTextField(frame: .zero)
         homeAddressTextField.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("addressPlaceholder", comment: ""),
                                                                         attributes: [NSAttributedString.Key.foregroundColor: ColorScheme().surfaceContrastLight])
         homeAddressTextField.roundCorners(.allCorners, radius: 11)
@@ -101,6 +119,16 @@ class UserInfoViewController: UIViewController {
         if shouldUpdateConstraints {
             shouldUpdateConstraints.toggle()
             
+            homeFieldErrorLabel.easy.layout(
+                Left().to(homeAddressTextField, .left),
+                Bottom(1).to(homeAddressTextField, .top)
+            )
+            nameFieldErrorLabel.easy.layout(
+                Left().to(fullNameTextField, .left),
+                Bottom(1).to(fullNameTextField, .top)
+            )
+
+            
             descriptionLabel.easy.layout(
                 Top(20).to(view, .topMargin),
                 Left(18),
@@ -132,6 +160,17 @@ class UserInfoViewController: UIViewController {
     }
     
     @objc func didTapSaveButton(sender: Any?) {
+        if fullNameTextField.text == "" {
+            fullNameTextField.animation = "shake"
+            fullNameTextField.animate()
+            nameFieldErrorLabel.isHidden = false
+        }
+        if homeAddressTextField.text == "" {
+            homeAddressTextField.animation = "shake"
+            homeAddressTextField.animate()
+            homeFieldErrorLabel.isHidden = false
+        }
+        
         if fullNameTextField.text != "" && fullNameTextField.text != nil {
             if homeAddressTextField.text != "" && homeAddressTextField.text != nil {
                 let user = User(fullName: fullNameTextField.text!.capitalized, address: homeAddressTextField.text!.capitalized)
@@ -145,6 +184,7 @@ class UserInfoViewController: UIViewController {
                 }
             }
         }
+        
     }
     
     func navigateToMovement() {
@@ -171,4 +211,8 @@ extension UserInfoViewController: UITextFieldDelegate {
         return true
     }
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        nameFieldErrorLabel.isHidden = true
+        homeFieldErrorLabel.isHidden = true
+    }
 }
