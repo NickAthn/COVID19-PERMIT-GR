@@ -10,7 +10,6 @@
 		01ABD45F2446153800BA39BD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD45A2446153800BA39BD /* UIView+Extensions.swift */; };
 		01ABD4602446153800BA39BD /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD45B2446153800BA39BD /* UIColor+Extensions.swift */; };
 		01ABD4612446153800BA39BD /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD45C2446153800BA39BD /* CALayer+Extensions.swift */; };
-		01ABD4622446153800BA39BD /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD45D2446153800BA39BD /* UILabel+Extensions.swift */; };
 		01ABD468244620A800BA39BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD467244620A800BA39BD /* User.swift */; };
 		01ABD46A244625FF00BA39BD /* MovementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD469244625FF00BA39BD /* MovementViewController.swift */; };
 		01ABD46C244626BA00BA39BD /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ABD46B244626BA00BA39BD /* Movement.swift */; };
@@ -27,7 +26,6 @@
 		01ABD45A2446153800BA39BD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		01ABD45B2446153800BA39BD /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		01ABD45C2446153800BA39BD /* CALayer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Extensions.swift"; sourceTree = "<group>"; };
-		01ABD45D2446153800BA39BD /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		01ABD467244620A800BA39BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		01ABD469244625FF00BA39BD /* MovementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementViewController.swift; sourceTree = "<group>"; };
 		01ABD46B244626BA00BA39BD /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 				01ABD45A2446153800BA39BD /* UIView+Extensions.swift */,
 				01ABD45B2446153800BA39BD /* UIColor+Extensions.swift */,
 				01ABD45C2446153800BA39BD /* CALayer+Extensions.swift */,
-				01ABD45D2446153800BA39BD /* UILabel+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,7 +255,6 @@
 				01ABD4602446153800BA39BD /* UIColor+Extensions.swift in Sources */,
 				01ABD46F244633B300BA39BD /* MessageService.swift in Sources */,
 				01CBD99C2445C432000611DF /* UserInfoViewController.swift in Sources */,
-				01ABD4622446153800BA39BD /* UILabel+Extensions.swift in Sources */,
 				01CBD9982445C432000611DF /* AppDelegate.swift in Sources */,
 				01ABD468244620A800BA39BD /* User.swift in Sources */,
 			);
@@ -413,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.athanasiou.-3033";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.athanasiou.covid-permit-gr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -433,7 +429,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.athanasiou.-3033";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.athanasiou.covid-permit-gr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

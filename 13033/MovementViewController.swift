@@ -18,6 +18,8 @@ class MovementViewController: UIViewController {
     
     var activeUser: User!
     
+    var messaging = MessageService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -68,7 +70,9 @@ class MovementViewController: UIViewController {
         do {
         activeUser = try Disk.retrieve("user.json", from: .applicationSupport, as: User.self)
         } catch {
-            // User Not found
+            // User Not found, ask for user information again
+            let vc = UserInfoViewController()
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
@@ -106,10 +110,11 @@ class MovementViewController: UIViewController {
 
     @objc func didTapMovementButton(sender: Any?) {
         guard let sender = sender as? UIButton else {return}
-        MessageService.sendMessage(self, forUser: activeUser, withMovementID: sender.tag)
+        messaging.sendMessage(self, forUser: activeUser, withMovementID: sender.tag)
     }
     
     @objc func didTapChangeUserInfoButton(sender: Any?) {
-        
+        let vc = UserInfoViewController()
+        self.present(vc, animated: true, completion: nil)
     }
 }

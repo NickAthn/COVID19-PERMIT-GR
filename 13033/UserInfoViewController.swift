@@ -24,6 +24,12 @@ class UserInfoViewController: UIViewController {
         setupView()
         updateViewConstraints()
         setupActions()
+        
+        if #available(iOS 13.0, *) {
+            isModalInPresentation = true
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func setupView() {
@@ -99,7 +105,7 @@ class UserInfoViewController: UIViewController {
     @objc func didTapSaveButton(sender: Any?) {
         if fullNameTextField.text != "" && fullNameTextField.text != nil {
             if homeAddressTextField.text != "" && homeAddressTextField.text != nil {
-                let user = User(fullName: fullNameTextField.text!, address: homeAddressTextField.text!)
+                let user = User(fullName: fullNameTextField.text!.capitalized, address: homeAddressTextField.text!.capitalized)
                 do {
                     try Disk.save(user, to: .applicationSupport, as: "user.json")
                     navigateToMovement()
