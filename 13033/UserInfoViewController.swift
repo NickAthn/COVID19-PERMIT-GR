@@ -177,7 +177,6 @@ class UserInfoViewController: UIViewController {
                 do {
                     try Disk.save(user, to: .applicationSupport, as: "user.json")
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userUpdated"), object: nil)
-
                     navigateToMovement()
                 } catch {
                     print("Error saving user info")
